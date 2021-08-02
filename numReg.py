@@ -2,9 +2,9 @@
 
 
 class Regularity:
-    """Is used to handle and modify the regularity"""
+    """Is used to create sequence and find regularities"""
     def __init__(self):
-        """Creates new regularity"""
+        """Creates new sequence"""
         self.reg = []
         print('Последовательность создана. Продолжайте вводить числа, когда захотите закончить, введите "С" или "S"')
         while True:
@@ -31,17 +31,23 @@ class Regularity:
         result = {}
         # result must match the sample -> 'parameter': (0 or 1 for success or failure respectively, additional value)
         result['arithmetic_progression'] = self.check_arithmetic()
+        result['geometric_progression'] = self.check_geometric()
 
     def check_arithmetic(self):
-        # finding difference of potential progression
+        # find difference of potential progression
         d = self.reg[1] - self.reg[0]
+        # check if it is an arithmetic progression by adding difference to the second number
         if self.reg[1] + d == self.reg[2]:
             return 0, d
         else:
             return 1, None  # follow pattern just in case, maybe it's redundant~
 
     def check_geometric(self):
-        pass
+        d = self.reg[1] - self.reg[0]
+        if self.reg[1] + d == self.reg[2]:
+            return 0, d
+        else:
+            return 1, None
 
 
 def start():

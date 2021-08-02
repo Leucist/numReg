@@ -1,4 +1,4 @@
-## Number Sequence application
+## Number Regularity application
 
 Application for finding regularities in a sequence of numbers.
 
