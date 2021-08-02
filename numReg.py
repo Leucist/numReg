@@ -76,6 +76,9 @@ class Regularity:
         d = self.reg[1] - self.reg[0]
         # check if it is an arithmetic progression by adding difference to the second number
         if self.reg[1] + d == self.reg[2]:
+            for i in range(len(self.reg)-3):
+                if self.reg[2 + i] + d != self.reg[3 + i]:
+                    return 1, None
             return 0, d
         else:
             return 1, None
@@ -85,11 +88,15 @@ class Regularity:
         r = self.reg[1] // self.reg[0]
         # check if it is a geometric progression by multiplying the second number by the common ratio
         if self.reg[1] * r == self.reg[2]:
+            for i in range(len(self.reg)-3):
+                if self.reg[2 + i] * r != self.reg[3 + i]:
+                    return 1, None
             return 0, r
         else:
             return 1, None
 
     def check_other(self):
+        # Doesn't work properly in many cases still, will be fixed
         s = self.reg[0] + self.reg[1]
         for i in range(11):
             if s + i == self.reg[2]:
