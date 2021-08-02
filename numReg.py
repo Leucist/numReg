@@ -28,10 +28,23 @@ class Regularity:
             return 1
         # Could be written as the assignment at the same time as the initialization,
         # ..but I am afraid that this may be too resource-intensive
-        result = {}
-        # result must match the sample -> 'parameter': (0 or 1 for success or failure respectively, additional value)
-        result['arithmetic_progression'] = self.check_arithmetic()
-        result['geometric_progression'] = self.check_geometric()
+        # result = {}
+        # # result must match the sample -> 'parameter': (0 or 1 for success or failure respectively, additional value)
+        # result['arithmetic_progression'] = self.check_arithmetic()
+        # result['geometric_progression'] = self.check_geometric()
+
+        # removed array thing, for now would just call func's consistently
+        result = self.check_arithmetic()
+        if result[0] == 0:
+            if result[1] == 0:
+                print("Арифметическая и геометрическая прогрессия с разностью 0 или знаменателем 1")
+                return 0
+            print("Это арифметическая прогрессия, разность - d=" + str(result[1]))
+            return 0
+        result = self.check_geometric()
+        if result[0] == 0:
+            print("Это геометрическая прогрессия, знаменатель - r=" + str(result[1]))
+            return 0
 
     def check_arithmetic(self):
         # find difference of potential progression
