@@ -1,10 +1,10 @@
-## Number Regularity application
+## Number Sequence application
 
 Application for finding regularities in a sequence of numbers.
 
 #### Usage >
 - Program started by executing numReg.py
-- User enter numbers through the loop, which is being automatically appended to the regularity array
+- User enter numbers through the loop, which is being automatically appended to the sequence array
 
 - ```bash
     Последовательность создана. Продолжайте вводить числа, когда захотите закончить, введите "С" или "S"
@@ -14,6 +14,6 @@ Application for finding regularities in a sequence of numbers.
     Введите число: S
     Принято.
     ```
- - Then script passes regularity through some in-class functions in order to find dependencies
+ - Then script passes sequence through some in-class functions in order to find dependencies
  - If such would be found, script should return the appropriate result or report failure
  
