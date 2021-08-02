@@ -43,9 +43,11 @@ class Regularity:
             return 1, None  # follow pattern just in case, maybe it's redundant~
 
     def check_geometric(self):
-        d = self.reg[1] - self.reg[0]
-        if self.reg[1] + d == self.reg[2]:
-            return 0, d
+        # find common ratio
+        r = self.reg[1] / self.reg[0]
+        # check if it is a geometric progression by multiplying the second number by the common ratio
+        if self.reg[1] * r == self.reg[2]:
+            return 0, r
         else:
             return 1, None
 
