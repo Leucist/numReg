@@ -9,14 +9,18 @@ Application for finding regularities in a sequence of numbers.
 - Program started by executing numReg.py
 - User enter numbers through the loop, which is being automatically appended to the sequence array
 
-- ```bash
+ ```bash
     Последовательность создана. Продолжайте вводить числа, когда захотите закончить, введите "С" или "S"
     Введите число: 1
     Введите число: 2
     Введите число: 3
     Введите число: S
     Принято.
-    ```
+ ```
  - Then script passes sequence through some in-class functions in order to find dependencies
  - If such would be found, script should return the appropriate result or report failure
+ ```bash
+    Это арифметическая прогрессия, разность - d = 1
+    Последующие 5 членов прогрессии: ..4, 5, 6, 7, 8
+ ```
  
