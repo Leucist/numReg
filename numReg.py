@@ -100,9 +100,11 @@ class Regularity:
         s = self.reg[0] + self.reg[1]
         for i in range(11):
             if s + i == self.reg[2]:
+                for j in range(len(self.reg) - 3):
+                    s += self.reg[2 + j]
+                    if s + i != self.reg[3 + j]:
+                        return 1, None
                 return 0, 0, i
-        del s
-
 
 
 def start():
