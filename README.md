@@ -2,7 +2,10 @@
 
 Application for finding regularities in a sequence of numbers.
 
-#### Usage >
+### ⚠️ Notice:
+> Pretty sure that my knowledge in maths won't be enough for accomplishing this project in the best way, so I'd better stop it's development for a while
+
+### Usage:
 - Program started by executing numReg.py
 - User enter numbers through the loop, which is being automatically appended to the sequence array
 
